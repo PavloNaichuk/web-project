@@ -1,0 +1,60 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #000;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #001f3f;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 10px;
+}
+
+section {
+  padding: 30px 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+h2 {
+  color: #00ccff;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.stadium-image {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

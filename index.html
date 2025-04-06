@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Історія славетного футбольного клубу Динамо Київ</title>
-    <link
-      rel="shortcut icon"
-      href="img/emblema.png"
-      type="image/x-icon"
-    />
+    <title>Історія ФК Динамо Київ</title>
+    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
@@ -16,8 +12,37 @@
     ></script>
   </head>
   <body>
-    <h1>Історія славетного футбольного клубу Динамо Київ</h1>
-    <h2>Умблема клубу</h2>
-    <img width="300" src="img/emblema.png" alt="Умблема футбольного клбу Динамо Київ" />
+    <header>
+      <h1>Історія футбольного клубу "Динамо" Київ"</h1>
+      <img src="img/emblema.png" alt="Герб Динамо Київ" class="logo" />
+    </header>
+
+    <!-- History Section -->
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="dynamo.history.partial.html"
+    ></section>
+
+    <!-- Achievements Section -->
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="dynamo.achievements.partial.html"
+    ></section>
+
+    <!-- Players Section -->
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="dynamo.players.partial.html"
+    ></section>
+
+    <!-- Stadium Section -->
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="dynamo.stadium.partial.html"
+    ></section>
   </body>
 </html>
