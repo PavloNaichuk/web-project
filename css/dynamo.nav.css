@@ -5,6 +5,35 @@
   background-color: #000;
   padding: 20px;
   border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.nav__logo {
+  color: #00ccff;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__burger {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav__list {
@@ -43,4 +72,37 @@
 .nav__icon:hover {
   background: #ff6600;
   color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    z-index: 10;
+  }
+
+  .nav__menu.active {
+    display: flex;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav__socials {
+    justify-content: center;
+  }
 }
