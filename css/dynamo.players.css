@@ -1,0 +1,17 @@
+.players {
+  padding: 20px;
+}
+
+.players__title {
+  font-size: 1.5em;
+  color: #00ccff;
+}
+
+.players__list {
+  list-style: none;
+  padding: 0;
+}
+
+.players__item {
+  margin-bottom: 10px;
+}
