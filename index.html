@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Історія ФК Динамо Київ</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./dynamo.history.css" />
-    <link rel="stylesheet" href="./dynamo.achievements.css" />
-    <link rel="stylesheet" href="./dynamo.players.css" />
-    <link rel="stylesheet" href="./dynamo.stadium.css" />
+    <link rel="stylesheet" href="./css/dynamo.nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+    <!-- HTMX -->
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
@@ -18,6 +18,13 @@
     ></script>
   </head>
   <body>
+    <!-- Navigation -->
+    <div 
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="dynamo.nav.partial.html"
+    ></div>
+
     <header>
       <h1>Історія футбольного клубу "Динамо" Київ"</h1>
       <img src="img/emblema.png" alt="Герб Динамо Київ" class="logo" />
@@ -25,6 +32,7 @@
 
     <!-- History Section -->
     <section
+      id="history"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="dynamo.history.partial.html"
@@ -32,6 +40,7 @@
 
     <!-- Achievements Section -->
     <section
+      id="achievements"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="dynamo.achievements.partial.html"
@@ -39,6 +48,7 @@
 
     <!-- Players Section -->
     <section
+      id="players"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="dynamo.players.partial.html"
@@ -46,9 +56,31 @@
 
     <!-- Stadium Section -->
     <section
+      id="stadium"
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="dynamo.stadium.partial.html"
     ></section>
+
+    <!-- Плавний scroll-to-section навіть із HTMX -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll('.nav__link').forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            const tryScroll = () => {
+              const target = document.getElementById(targetId);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                setTimeout(tryScroll, 100);
+              }
+            };
+            tryScroll();
+          });
+        });
+      });
+    </script>
   </body>
 </html>
