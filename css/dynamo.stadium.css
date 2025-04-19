@@ -1,18 +1,23 @@
 .stadium {
   padding: 40px 20px;
+  background-color: #fff;
+  color: #111;
 }
+
 .stadium__main-title {
   text-align: center;
   font-size: 2rem;
   color: #00ccff;
   margin-bottom: 40px;
 }
+
 .stadium__container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   align-items: center;
   margin-bottom: 50px;
+  background-color: #fff;
 }
 
 .stadium__image-wrapper {
@@ -25,7 +30,7 @@
   max-height: 400px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 }
 
 .stadium__content {
@@ -40,7 +45,7 @@
 
 .stadium__description {
   font-size: 1rem;
-  color: #ddd;
+  color: #333;
   line-height: 1.6;
 }
 
