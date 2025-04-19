@@ -4,9 +4,11 @@
 
 .history__title {
   text-align: center;
+  margin: 0 auto;
   font-size: 2rem;
   color: #00ccff;
   margin-bottom: 30px;
+  display: block;
 }
 
 .history__image {
@@ -22,6 +24,9 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.history .timeline-block small {
+  color: #00ccff;
 }
 
 .history__event {
@@ -48,7 +53,7 @@
 .history__heading {
   margin: 0 0 5px;
   font-size: 1.2rem;
-  color: #fff;
+  color: #00ccff;
 }
 
 .history__text {

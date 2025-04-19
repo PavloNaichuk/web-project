@@ -1,58 +1,60 @@
 .stadium {
   padding: 40px 20px;
 }
-
+.stadium__main-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00ccff;
+  margin-bottom: 40px;
+}
 .stadium__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .stadium__image-wrapper {
-  max-width: 100%;
-  width: 100%;
+  flex: 1 1 400px;
 }
 
 .stadium__image {
   width: 100%;
   height: auto;
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
 
 .stadium__content {
-  max-width: 600px;
-  text-align: center;
+  flex: 1 1 400px;
 }
 
 .stadium__title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #00ccff;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .stadium__description {
-  color: #ddd;
   font-size: 1rem;
+  color: #ddd;
   line-height: 1.6;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .stadium__container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-  }
-
-  .stadium__image-wrapper {
-    flex: 1;
-    max-width: 400px;
+    flex-direction: column;
+    text-align: center;
   }
 
   .stadium__content {
-    flex: 1;
-    padding-left: 40px;
+    margin-top: 20px;
+  }
+
+  .stadium__title {
+    font-size: 1.5rem;
   }
 }

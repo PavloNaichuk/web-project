@@ -9,28 +9,56 @@
   margin-bottom: 30px;
 }
 
-.players__list {
+/* Сітка на 2 гравці в рядок */
+.players__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.players__item {
-  background: rgba(255, 255, 255, 0.08);
+/* Картка гравця */
+.players__card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00ccff;
   border-radius: 12px;
-  padding: 15px;
+  padding: 20px;
   color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: transform 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.players__item:hover {
-  transform: scale(1.03);
-  background: rgba(0, 204, 255, 0.2);
+.players__card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Фото гравця — фіксована висота, однаковий розмір */
+.players__photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Текстові блоки */
+.players__name {
+  font-size: 1.3rem;
+  color: #00ccff;
+  margin-bottom: 5px;
+}
+
+.players__years {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.players__desc {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
 }
