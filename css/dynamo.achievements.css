@@ -1,6 +1,8 @@
 .achievements {
   padding: 40px 20px;
   text-align: center;
+  background-color: #fff;
+  color: #111;
 }
 
 .achievements__title {
@@ -19,19 +21,19 @@
 }
 
 .achievements__item {
-  background: rgba(255, 255, 255, 0.05);
+  background: #f9f9f9;
   padding: 20px;
   border-radius: 12px;
-  color: #fff;
+  color: #111;
   text-align: left;
   border-left: 5px solid #00ccff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .achievements__item:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.08);
+  background: #f1f1f1;
 }
 
 .achievements__heading {
@@ -41,6 +43,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #00ccff;
 }
 
 .achievements__heading::before {
@@ -57,7 +60,7 @@
 
 .achievements__years {
   font-size: 0.95rem;
-  color: #ccc;
+  color: #333;
   line-height: 1.5;
 }
 
