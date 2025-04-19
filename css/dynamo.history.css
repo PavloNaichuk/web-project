@@ -27,6 +27,8 @@
 }
 .history .timeline-block small {
   color: #00ccff;
+  display: block;
+  margin-top: 30px;
 }
 
 .history__event {
