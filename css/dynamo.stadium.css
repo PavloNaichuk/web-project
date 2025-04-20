@@ -1,13 +1,13 @@
 .stadium {
   padding: 40px 20px;
-  background-color: #fff;
-  color: #111;
+  background-color: var(--background-light);
+  color: var(--text-color);
 }
 
 .stadium__main-title {
   text-align: center;
   font-size: 2rem;
-  color: #00ccff;
+  color: var(--accent-color);
   margin-bottom: 40px;
 }
 
@@ -17,7 +17,7 @@
   gap: 30px;
   align-items: center;
   margin-bottom: 50px;
-  background-color: #fff;
+  background-color: var(--background-light);
 }
 
 .stadium__image-wrapper {
@@ -39,13 +39,13 @@
 
 .stadium__title {
   font-size: 1.8rem;
-  color: #00ccff;
+  color: var(--accent-color);
   margin-bottom: 15px;
 }
 
 .stadium__description {
   font-size: 1rem;
-  color: #333;
+  color: #222;
   line-height: 1.6;
 }
 

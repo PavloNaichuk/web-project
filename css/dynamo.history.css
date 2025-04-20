@@ -1,14 +1,14 @@
 .history {
   padding: 40px 20px;
-  background-color: #fff;
-  color: #111;
+  background-color: var(--background-light);
+  color: var(--text-color);
 }
 
 .history__title {
   text-align: center;
   margin: 0 auto;
   font-size: 2rem;
-  color: #00ccff;
+  color: var(--accent-color);
   margin-bottom: 30px;
   display: block;
 }
@@ -29,7 +29,7 @@
 }
 
 .history .timeline-block small {
-  color: #00ccff;
+  color: var(--accent-color);
   display: block;
   margin-top: 30px;
 }
@@ -38,16 +38,16 @@
   display: flex;
   align-items: flex-start;
   gap: 15px;
-  background: #f9f9f9;
+  background: var(--background-soft);
   padding: 20px;
-  border-left: 4px solid #00ccff;
+  border-left: 4px solid var(--accent-color);
   border-radius: 12px;
   position: relative;
-  color: #111;
+  color: var(--text-color);
 }
 
 .history__year {
-  background: #00ccff;
+  background: var(--accent-color);
   color: #000;
   padding: 8px 12px;
   font-weight: bold;
@@ -59,13 +59,13 @@
 .history__heading {
   margin: 0 0 5px;
   font-size: 1.2rem;
-  color: #00ccff;
+  color: var(--accent-color);
 }
 
 .history__text {
   margin: 0;
   font-size: 1rem;
-  color: #333;
+  color: #222;
 }
 
 @media (max-width: 768px) {
