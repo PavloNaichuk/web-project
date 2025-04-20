@@ -48,7 +48,7 @@
 
 .history__year {
   background: var(--accent-color);
-  color: #000;
+  color: var(--text-contrast-color);
   padding: 8px 12px;
   font-weight: bold;
   border-radius: 20px;
@@ -65,7 +65,7 @@
 .history__text {
   margin: 0;
   font-size: 1rem;
-  color: #222;
+  color: var(--text-secondary-color);
 }
 
 @media (max-width: 768px) {

@@ -45,7 +45,7 @@
 
 .stadium__description {
   font-size: 1rem;
-  color: #222;
+  color: var(--text-color);
   line-height: 1.6;
 }
 
@@ -60,6 +60,6 @@
   }
 
   .stadium__title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }

@@ -1,14 +1,18 @@
 :root {
   --accent-color: #00ccff;
   --text-color: #111;
+  --text-secondary-color: #666;
+  --text-contrast-color: #000;
   --background-light: #fff;
+  --background-soft: #f1f1f1;
   --background-dark: #001f3f;
+  --font-main: Arial, sans-serif;
 }
 
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-main);
   color: var(--text-color);
   background-color: var(--background-light);
 }
@@ -38,8 +42,12 @@ section {
   border-radius: 10px;
 }
 
-h2 {
+h1, h2, h3 {
+  font-weight: bold;
   color: var(--accent-color);
+}
+
+h2 {
   margin-bottom: 15px;
 }
 
@@ -54,13 +62,58 @@ ul li {
 
 p {
   line-height: 1.6;
+  margin-bottom: 1em;
 }
 
-.stadium-image {
+img, .stadium-image {
   max-width: 100%;
-  width: 100%;
   display: block;
-  margin: 20px auto;
   border-radius: 10px;
+  object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: var(--background-soft);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-button:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
 }

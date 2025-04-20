@@ -50,12 +50,18 @@
 
 .players__years {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-secondary-color);
   margin-bottom: 10px;
 }
 
 .players__desc {
   font-size: 1rem;
-  color: #222;
+  color: var(--text-secondary-color);
   line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .players__grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -33,7 +33,7 @@
 
 .achievements__item:hover {
   transform: translateY(-4px);
-  background: #f1f1f1;
+  background: var(--background-soft);
 }
 
 .achievements__heading {
@@ -48,19 +48,12 @@
 
 .achievements__heading::before {
   content: '🏆';
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
-.achievements__count {
+.achievements__desc {
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent-color);
-  margin-bottom: 6px;
-}
-
-.achievements__years {
-  font-size: 0.95rem;
-  color: #222;
+  color: var(--text-secondary-color);
   line-height: 1.5;
 }
 
