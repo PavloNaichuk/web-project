@@ -61,17 +61,26 @@
 }
 
 .nav__icon {
-  color: #ff6600;
-  font-size: 1.2em;
-  border: 1px solid #ff6600;
-  padding: 6px;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #00ccff;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #00ccff;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
 }
 
 .nav__icon:hover {
-  background: #ff6600;
-  color: #fff;
+  background-color: #00ccff;
+  color: white;
+}
+
+.nav__icon i {
+  color: inherit;
 }
 
 /* RESPONSIVE */
