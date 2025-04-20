@@ -64,11 +64,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border: 2px solid #00ccff;
-  border-radius: 10px;
-  font-size: 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
   color: #00ccff;
   transition: background 0.3s ease, color 0.3s ease;
   text-decoration: none;
@@ -83,7 +83,6 @@
   color: inherit;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav__toggle {
     display: flex;
