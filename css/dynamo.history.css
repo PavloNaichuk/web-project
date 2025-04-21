@@ -47,7 +47,7 @@
   margin: 0;
   font-size: 1.2rem;
   color: var(--accent-color);
-  cursor: pointer; /* підсвічує клікабельність */
+  cursor: pointer;
 }
 
 .history__text {
@@ -55,22 +55,18 @@
   font-size: 1rem;
   color: var(--text-secondary-color);
   line-height: 1.6;
-  /* відображається завжди, буде схований лише при додаванні класу */
 }
 
-/* сховати текст при згорнутому стані */
 .history__event--collapsed .history__text {
   display: none;
 }
 
-/* стрілка біля заголовка */
 .toggle-icon {
   display: inline-block;
   margin-left: 8px;
   transition: transform 0.2s ease;
 }
 
-/* адаптив */
 @media (max-width: 768px) {
   .history__event {
     flex-direction: column;
