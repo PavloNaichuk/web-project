@@ -1,12 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const blocks = document.querySelectorAll('.history__event');
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('history__event--visible');
-        io.unobserve(entry.target);
-      }
+// js/history.js
+
+function initHistoryToggle() {
+  document.querySelectorAll('.history__event').forEach((ev, idx) => {
+    // унікальна ініціалізація
+    if (ev.dataset.toggleInit) return;
+    ev.dataset.toggleInit = 'true';
+
+    // стрілка
+    const heading = ev.querySelector('.history__heading');
+    const text    = ev.querySelector('.history__text');
+    if (!heading || !text) return;
+
+    const icon = document.createElement('span');
+    icon.className = 'toggle-icon';
+    icon.textContent = '▾'; // вниз
+    heading.appendChild(icon);
+
+    // обробник кліку — сховати/показати текст
+    heading.addEventListener('click', () => {
+      const collapsed = ev.classList.toggle('history__event--collapsed');
+      icon.style.transform = collapsed ? 'rotate(-90deg)' : 'rotate(0deg)';
     });
-  }, { threshold: 0.1 });
-  blocks.forEach(b => io.observe(b));
+  });
+}
+
+// при першому завантаженні та після HTMX-свопу
+document.addEventListener('DOMContentLoaded', initHistoryToggle);
+document.body.addEventListener('htmx:afterSwap', e => {
+  if (e.detail.target.id === 'history') {
+    initHistoryToggle();
+  }
 });
