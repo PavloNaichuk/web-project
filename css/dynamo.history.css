@@ -47,7 +47,6 @@
   margin: 0;
   font-size: 1.2rem;
   color: var(--accent-color);
-  cursor: pointer;
 }
 
 .history__text {
@@ -55,16 +54,6 @@
   font-size: 1rem;
   color: var(--text-secondary-color);
   line-height: 1.6;
-}
-
-.history__event--collapsed .history__text {
-  display: none;
-}
-
-.toggle-icon {
-  display: inline-block;
-  margin-left: 8px;
-  transition: transform 0.2s ease;
 }
 
 @media (max-width: 768px) {

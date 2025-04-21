@@ -42,7 +42,6 @@
   align-items: center;
   gap: 6px;
   color: var(--accent-color);
-  cursor: pointer;
 }
 
 .achievements__heading::before {
