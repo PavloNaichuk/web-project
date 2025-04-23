@@ -9,7 +9,8 @@
   --font-main: Arial, sans-serif;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
@@ -42,7 +43,9 @@ section {
   border-radius: 10px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: bold;
   color: var(--accent-color);
 }
@@ -65,7 +68,8 @@ p {
   margin-bottom: 1em;
 }
 
-img, .stadium-image {
+img,
+.stadium-image {
   max-width: 100%;
   display: block;
   border-radius: 10px;

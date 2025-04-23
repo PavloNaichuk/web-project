@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <link rel="icon" type="image/png" href="img/emblema_small.png">
+    <link rel="icon" type="image/png" href="img/emblema_small.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Історія ФК Динамо Київ</title>
 
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
@@ -16,7 +19,7 @@
     ></script>
   </head>
   <body>
-    <div 
+    <div
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="dynamo.nav.partial.html"
@@ -57,14 +60,14 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('.nav__link').forEach(link => {
-          link.addEventListener('click', function (e) {
+        document.querySelectorAll(".nav__link").forEach((link) => {
+          link.addEventListener("click", function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').replace('#', '');
+            const targetId = this.getAttribute("href").replace("#", "");
             const tryScroll = () => {
               const target = document.getElementById(targetId);
               if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
+                target.scrollIntoView({ behavior: "smooth" });
               } else {
                 setTimeout(tryScroll, 100);
               }

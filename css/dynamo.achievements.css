@@ -45,7 +45,7 @@
 }
 
 .achievements__heading::before {
-  content: '🏆';
+  content: "🏆";
   font-size: 1.4rem;
 }
 

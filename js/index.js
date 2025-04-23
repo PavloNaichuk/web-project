@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  import('./nav.js');                                      
-  import('./stadium.js');              
+document.addEventListener("DOMContentLoaded", () => {
+  import("./nav.js");
+  import("./stadium.js");
 });
