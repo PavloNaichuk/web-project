@@ -33,7 +33,7 @@
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1rem;
 }
 
 .nav__list {
@@ -76,6 +76,18 @@
 .nav__icon:hover {
   background-color: var(--accent-color);
   color: var(--background-light);
+}
+
+.navbar__clock {
+  font-family: var(--font-regular);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin: 0 0.5rem;
+  min-width: 8ch;
+  text-align: center;
+  transform: translateY(-2px);
+  align-self: center;
 }
 
 @media (max-width: 768px) {
