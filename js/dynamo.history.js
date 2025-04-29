@@ -1,4 +1,4 @@
-export function initHistorySlider() {
+function initHistorySlider() {
     const slides = Array.from(document.querySelectorAll('.slider__slide'));
     const dotsContainer = document.querySelector('.slider__dots');
     const track = document.querySelector('.slider__track');
@@ -39,3 +39,13 @@ export function initHistorySlider() {
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    initHistorySlider();
+});
+
+document.body.addEventListener('htmx:afterSwap', (e) => {
+    if (e.detail.target.id === 'history') {
+        initHistorySlider();
+    }
+});

@@ -1,4 +1,3 @@
-// js/global.clock.js
 (function() {
     function startClock() {
       const el = document.getElementById('clock');
