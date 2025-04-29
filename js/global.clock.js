@@ -17,8 +17,7 @@ function startClock() {
   update();
   setInterval(update, 1000);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  startClock();
-});
 document.body.addEventListener('htmx:afterSwap', startClock);
+
+startClock();
+

@@ -39,13 +39,10 @@ function initHistorySlider() {
         });
     });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    initHistorySlider();
-});
-
 document.body.addEventListener('htmx:afterSwap', (e) => {
     if (e.detail.target.id === 'history') {
         initHistorySlider();
     }
 });
+
+initHistorySlider();
