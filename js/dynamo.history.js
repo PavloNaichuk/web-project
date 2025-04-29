@@ -1,4 +1,3 @@
-// js/dynamo.history.js
 export function initHistorySlider() {
     const slides = Array.from(document.querySelectorAll('.slider__slide'));
     const dotsContainer = document.querySelector('.slider__dots');

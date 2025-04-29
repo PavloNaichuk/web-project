@@ -32,6 +32,11 @@
   padding: 20px;
   border-left: 4px solid var(--accent-color);
   border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.history__event:hover {
+  transform: translateY(-5px);
 }
 
 .history__year {
