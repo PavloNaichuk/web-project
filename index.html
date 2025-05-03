@@ -1,82 +1,63 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <link rel="icon" type="image/png" href="img/emblema_small.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Історія ФК Динамо Київ</title>
 
-    <link rel="stylesheet" href="./css/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<head>
+  <link rel="icon" type="image/png" href="img/emblema_small.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Історія ФК Динамо Київ</title>
 
-    <script
-      src="https://unpkg.com/htmx.org@1.9.10"
-      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="dynamo.nav.partial.html"
-    ></div>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <header>
-      <h1>Історія футбольного клубу "Динамо" Київ"</h1>
-      <img src="img/emblema.png" alt="Герб Динамо Київ" class="logo" />
-    </header>
+  <script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+</head>
 
-    <section
-      id="history"
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="dynamo.history.partial.html"
-    ></section>
+<body>
+  <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="dynamo.nav.partial.html"></div>
 
-    <section
-      id="achievements"
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="dynamo.achievements.partial.html"
-    ></section>
+  <header>
+    <h1>Історія футбольного клубу "Динамо" Київ"</h1>
+    <img src="img/emblema.png" alt="Герб Динамо Київ" class="logo" />
+  </header>
 
-    <section
-      id="players"
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="dynamo.players.partial.html"
-    ></section>
+  <section id="history" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="dynamo.history.partial.html">
+  </section>
 
-    <section
-      id="stadium"
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="dynamo.stadium.partial.html"
-    ></section>
+  <section id="achievements" data-hx-trigger="load" data-hx-swap="outerHTML"
+    data-hx-get="dynamo.achievements.partial.html"></section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".nav__link").forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").replace("#", "");
-            const tryScroll = () => {
-              const target = document.getElementById(targetId);
-              if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
-              } else {
-                setTimeout(tryScroll, 100);
-              }
-            };
-            tryScroll();
-          });
+  <section id="players" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="dynamo.players.partial.html">
+  </section>
+
+  <section id="stadium" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="dynamo.stadium.partial.html">
+  </section>
+
+  <section id="stadium" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="dynamo.footer.partial.html">
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".nav__link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").replace("#", "");
+          const tryScroll = () => {
+            const target = document.getElementById(targetId);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            } else {
+              setTimeout(tryScroll, 100);
+            }
+          };
+          tryScroll();
         });
       });
-    </script>
-    <script type="module" src="js/index.js"></script>
-  </body>
+    });
+  </script>
+  <script type="module" src="js/index.js"></script>
+</body>
+
 </html>
