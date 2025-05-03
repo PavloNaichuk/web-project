@@ -124,7 +124,7 @@ img,
 
 .site-footer {
   background-color: var(--background-dark);
-  color: var(--accent-color);
+  color: var(--background-light); 
   text-align: center;
   padding: 25px 10px;
   margin-top: 50px;
@@ -133,7 +133,7 @@ img,
 }
 
 .site-footer a {
-  color: var(--accent-color); 
+  color: var(--background-light); 
   text-decoration: none;
   margin: 0 6px;
 }
