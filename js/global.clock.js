@@ -17,5 +17,7 @@ function startClock() {
   update();
   setInterval(update, 1000);
 }
-document.body.addEventListener('htmx:afterSettle', startClock);
+document.body.addEventListener('htmx:afterSwap', startClock);
+
+startClock();
 
