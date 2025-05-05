@@ -5,6 +5,4 @@ function setupStadiumImages() {
     });
   });
 }
-document.body.addEventListener("htmx:afterOnLoad", setupStadiumImages);
-setupStadiumImages();
-
+document.body.addEventListener("htmx:afterSettle", setupStadiumImages);
