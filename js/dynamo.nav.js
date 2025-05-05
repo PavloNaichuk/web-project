@@ -9,7 +9,7 @@ function setupNavToggle() {
   }
 }
 
-document.body.addEventListener('htmx:afterSwap', (e) => {
+document.body.addEventListener('htmx:afterSettle', (e) => {
   if (e.detail.target.matches('[data-hx-get="dynamo.nav.partial.html"]')) {
     setupNavToggle();
   }

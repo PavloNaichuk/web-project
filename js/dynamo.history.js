@@ -39,7 +39,7 @@ function initHistorySlider() {
         });
     });
 }
-document.body.addEventListener('htmx:afterSwap', (e) => {
+document.body.addEventListener('htmx:afterSettle', (e) => {
     if (e.detail.target.id === 'history') {
         initHistorySlider();
     }
